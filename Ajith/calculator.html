@@ -1,0 +1,244 @@
+<html>
+<head><title>Calculator</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+	.mainDiv
+	{
+		width:500px; 	
+		height:500px;
+		background-color:#c196a0;
+		margin-left:650px;
+		margin-top: 100px;
+	}
+	    .divOne
+		{
+			height:100px;
+			background-color:#ddd7f7;
+		}
+		.divTwo
+		{
+			width:300px;
+			background-color:#f9eded;
+			float:left;
+		}
+		.input{
+			width:300px;
+			height:100px;
+			background-color:#f9eded;
+			font-size:20px;
+		}
+		.divThree
+		{
+			width:200px;
+			height:100px;
+			background-color:#d9deff;
+			float:left;
+		}
+		.buttonmain{
+			width:200px;
+			height:100px;
+			font-size:30px;
+			cursor: pointer;
+		}
+		.buttonmain:hover{
+			color:red;
+		}
+		.divFour{
+			width:400px;
+			height:400px;
+			background-color:blue;
+			float:left;
+		}
+		.divFive{
+			width:100px;
+			height:400px;
+			background-color:red;
+			float:left;
+		}
+				.divFiveone{
+					width:100px;
+					height:100px;
+					background-color:#aee4ea;
+					cursor: pointer;
+				}
+				.divFivetwo{
+					width:100px;
+					height:100px;
+					background-color:#f7f3bf;
+					cursor: pointer;
+				}
+				.divFivethree{
+					width:100px;
+					height:100px;
+					background-color: #ff99ff;
+					cursor: pointer;
+				}
+				.divFivefour{
+					width:100px;
+					height:100px;
+					background-color: #a3c2c2;
+					cursor: pointer;
+				}
+		.divSix{
+			width:400px;
+			height:133.33px;
+			background-color:#f5edac;
+		}
+		.divSeven{
+			width:130px;
+			height:133.33px;
+			background-color:#bdf7f1;
+			float:left;
+			cursor: pointer;
+		}
+		.divEight{
+			width:130px;
+			height:133.33px;
+			background-color:#ffcdc9;
+			float:left;
+			cursor: pointer;
+		}
+		.divNine{
+			width:140px;
+			height:133.33px;
+			background-color:#b7eac0;
+			float:left;
+			cursor: pointer;
+		}
+		.divTen{
+			width:130px;
+			height:133.33px;
+			background-color:#81929a;
+			float:left;
+			cursor: pointer;
+		}
+		.divEleven{
+			width:130px;
+			height:133.33px;
+			background-color:#bdbdbd;
+			float:left;
+			cursor: pointer;
+		}
+		.divTwelve{
+			width:140px;
+			height:133.33px;
+			background-color:#9c9491;
+			float:left;
+			cursor: pointer;
+		}
+		.divThirteen{
+			width:100px;
+			height:133.33px;
+			background-color:#9c997f;
+			float:left;
+			cursor: pointer;
+		}
+		.divFourteen{
+			width:100px;
+			height:133.33px;
+			background-color:#af807c;
+			float:left;
+			cursor: pointer;
+		}
+		.divFifteen{
+			width:100px;
+			height:133.33px;
+			background-color:#83718c;
+			float:left;
+			cursor: pointer;
+		}
+		.divSixteen{
+			width:100px;
+			height:133.33px;
+			background-color:#fbc89e;
+			float:left;
+			cursor: pointer;
+		}
+		.spannumone{
+			font-size:70px;
+			margin-left:40px;
+			line-height:145px;
+		}
+		.spannumtwo{ 
+			font-size:70px;
+			margin-left:34px;
+			line-height:145px;
+		}
+		.spannumthree{
+			font-size:70px;
+			margin-left:40px;
+		}
+		.spannumfour{
+			font-size:60px;
+			margin-left:33px;
+			line-height:105px;
+		}
+		.spannumfive{
+			font-size:45px;
+			margin-left:40px;
+			line-height:110px;
+		}
+		.spannumsix{
+			font-size:70px;
+			margin-left:35px;
+			line-height:140px;
+		}
+	@media only screen and (max-width:300px){
+		.body{
+		width:80%;
+		}
+	}
+</style>
+</head>
+<body class="body">   
+<div class="mainDiv">
+ <div class="divOne">
+		<div class="divTwo">
+			<input id="inpt" class="form-control input" placeholder="result"></input>
+		</div>
+	<div class="divThree">
+<button onclick="addition()" class="buttonmain">=</button>
+</div>
+	</div>
+<div class="divFour">
+<div class="divSix">
+    <div onclick="send(1)" class="divSeven"><span class="spannumone">1</span></div>
+		<div onclick="send(2)" class="divEight"><span class="spannumone">2</span></div>
+	<div onclick="send(3)"class="divNine"><span class="spannumone">3</span></div>
+</div>
+	<div onclick="send(4)"class="divTen"><span class="spannumone">4</span></div>
+		<div onclick="send(5)"class="divEleven"><span class="spannumone">5</span></div>
+			<div onclick="send(6)"class="divTwelve"><span class="spannumone">6</span></div>
+				<div onclick="send(7)"class="divThirteen"><span class="spannumtwo">7</span></div>
+			<div onclick="send(8)"class="divFourteen"><span class="spannumtwo">8</span></div>
+		<div onclick="send(9)"class="divFifteen"><span class="spannumtwo">9</span></div>
+	<div onclick="send(0)"class="divSixteen"><span class="spannumtwo">0</span></div>
+</div>
+	<div class="divFive">
+		<div onclick="send('-')" class="divFiveone"><span class="spannumthree">-</span></div>
+			<div onclick="send('+')"class="divFivetwo"><span class="spannumfour">+</span></div>
+				<div onclick="send('/')"class="divFivethree"><span class="spannumfive">/</span></div>
+			<div onclick="send('*')"class="divFivefour"><span class="spannumsix">*</span></div>
+	    </div>
+	</div>
+<script>
+	function send(red)
+	{
+	   var call = document.getElementById("inpt").value;
+		document.getElementById("inpt").value=call+red;
+	}
+	function addition()
+	{
+		 var test = document.getElementById("inpt").value;
+		 var cals =eval(test);
+		document.getElementById("inpt").value=cals;
+	}
+	
+</script>
+</body>
+
+</html>
